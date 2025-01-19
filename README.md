@@ -79,12 +79,13 @@ touch .env
 echo LOCUST_HOST=https://example.com >> .env
 # echo API_KEY=sample-api-key >> .env
 # locustサーバー立ち上げの簡素化
-echo "alias locust='source .env & locust --config ./locust/locust.conf -H \${LOCUST_HOST}'" >> .env
+echo "alias locust='locust --config ./locust/locust.conf -H \${LOCUST_HOST}'" >> .env
 ```
 
 ### ローカルlocustサーバの立ち上げ
 ```shell
 poetry shell
+source .env
 locust
 ```
 [http://localhost:8089](http://localhost:8089)にアクセス。
