@@ -68,13 +68,13 @@ exit
 ## 負荷試験の実行
 
 ### .envファイルの設定
-.envファイルを作成し、負荷試験のターゲットとなるホストとAPIキーを環境変数に追加してください。</br>
-環境変数の値は適宜変更してください。
+.envファイルを作成し、負荷試験のターゲットとなるホストを.envに追記してください。</br>
+APIキーなど、各自必要な環境変数を.envに追記してください。
 
 ```shell
 touch .env
 echo LOCUST_HOST=https://example.com >> .env
-echo API_KEY=verysecret >> .env
+# echo API_KEY=sample-api-key >> .env
 # locustサーバー立ち上げの簡素化
 echo "alias locust='source .env & locust --config ./locust/locust.conf -H \${LOCUST_HOST}'" >> .env
 ```
