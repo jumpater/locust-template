@@ -47,7 +47,6 @@ poetry --version
 
 # プラグインインストール
 poetry self add poetry-plugin-shell
-poetry self add poetry-dotenv-plugin
 ```
 
 **pyenvの場合**
@@ -59,7 +58,6 @@ poetry --version
 
 # プラグインインストール
 poetry self add poetry-plugin-shell
-poetry self add poetry-dotenv-plugin
 ```
 
 ### 3. 依存関係インストール & 仮想環境への出入り
@@ -90,6 +88,7 @@ echo "alias locust='locust --config ./locust/locust.conf -H \${LOCUST_HOST}'" >>
 ### ローカルlocustサーバの立ち上げ
 ```shell
 poetry shell
+source .env
 locust
 ```
 [http://localhost:8089](http://localhost:8089)にアクセス。
